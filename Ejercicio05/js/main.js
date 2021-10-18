@@ -2,18 +2,15 @@
 
 // Crea una aplicación que nos convierta un número en base decimal a binario.Esto lo realizará un método al que le pasaremos el número como parámetro, devolverá un String con el numero convertido a binario.Para convertir un número decimal a binario, debemos dividir entre 2 el número y el resultado de esa división se divide entre 2 de nuevo hasta que no se pueda dividir más, el resto que obtengamos de cada división formara el número binario, de abajo a arriba.
 
-var numero = prompt("Indica que número a convertir a binario");
-numero = parseInt(numero);
-var binario = [];
+let num = parseInt(prompt("Indica que número quieres convertir en binario"));
+let binario = [];
 
-if (numero == 0) {
+if (num == 0) {
     binario.push(0);
 }
-
-while (numero > 0) {
-    binario.push(numero % 2);
-    numero = parseInt(numero / 2);
+while (num > 0) {
+    binario.push(num % 2);
+    num = parseInt(num / 2);
 }
-
 binario.reverse(binario);
-console.log(binario);
+alert(binario);
