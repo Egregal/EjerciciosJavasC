@@ -4,13 +4,28 @@
 
 let num = parseInt(prompt("Indica que número quieres convertir en binario"));
 let binario = [];
+let pasarABinario = "";
 
-if (num == 0) {
-    binario.push(0);
+num = parseInt(num)
+
+const pasarABinario = (num) => {
+    if (num == 0) {
+        binario.push(0);
+    }
+
+    while (num > 0) {
+        binario.push(num % 2);
+        num = parseInt(num / 2);
+    }
+
+    binario = binario.reverse(binario);
+    for (let i = 0; i < binario.length; i++) {
+        pasarABinario = pasarABinario + toString(binario[i]);
+    }
 }
-while (num > 0) {
-    binario.push(num % 2);
-    num = parseInt(num / 2);
-}
-binario.reverse(binario);
 alert(binario);
+
+//-----------------------------
+
+let num = parseInt(prompt("Introduce numero"))
+toString
